@@ -142,3 +142,35 @@ function getBooks() {
 function getBook(id) {
   return data.find((d) => d.id === id);
 }
+
+// // Destructuring 
+// const book = getBook(2)
+
+// const books = getBooks();
+
+// const {title, author, pages, publicationDate, genres, hasMovieAdaptation} = book;
+
+// const [primary, secondary, ...restGenres] = genres
+// console.log(restGenres)
+
+// const newGenres = [...genres, 'epic fantasy']
+// const updatedBook = {...book, moviePublicationDate: "2001-12-19", pages: 1210}
+
+// const summary = `${title}, a ${pages}--page long book, was written by ${author}`
+// summary
+
+// const pagesRange = pages > 1000 ? 'over a thousand' : 'less than one thousand'
+// pagesRange
+
+// function getTotalReviewCount(book){
+//   const goodreads = book.reviews.goodreads.reviewsCount;
+//   const librarything = book.reviews.librarything?.reviewsCount?? 0;
+//   return goodreads + librarything
+// }
+
+// fetch('https://jsonplaceholder.typicode.com/todos').then(response => response.json()).then(data=>console.log(data));
+
+async function getTodos(){
+  const res = await fetch('https://jsonplaceholder.typicode.com/todos)')
+  const data = res.json()
+}
